@@ -1,1 +1,1 @@
-# ebaytemplate
+https://apparelwholesaledepotuk.github.io/ebaytemplate/
