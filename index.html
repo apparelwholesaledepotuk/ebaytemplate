@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang=en-US>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apparel Wholesale Depot</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<style>
+@charset "utf-8";
+body{margin:0;padding:0;font-family:'Open Sans',sans-serif;font-size:14px;display:inline-block;width:100%;color:#333;overflow-x:hidden;font-weight:400}
+input,button,select,textarea{outline:none;font-family:'Open Sans',sans-serif}
+#Body,#Body *,font{font-family:'Open Sans',sans-serif;}
+a,p,strong,ul,h1,h2,h3,h4,h5,h6{margin:0;padding:0}
+h1{font-size:24px}
+h3{font-size:28px}
+h4{font-size:22px}
+a:focus,input:focus{outline:none!important;text-decoration:none}
+a:hover{text-decoration:none}
+@media (min-width: 768px) {
+.container{width:768px}
+}
+@media (min-width: 939px) {
+.container{width:919px}
+}
+@media (min-width: 1200px) {
+.container{width:1050px}
+}
+.container{padding:0 10px}
+.pagewidth{float:left;width:100%}
+.wrappage{width:100%}
+input[type=text]::-ms-clear{display:none!important;width:0!important;height:0!important}
+input[type=text]::-ms-reveal{display:none!important;width:0!important;height:0!important}
+.input-text,.sub_search{outline:0!important}
+.sub_search{border:0!important}
+#Body .tab-content-m{float:left;width:100%}
+select:focus,button:focus,option:focus,select::-moz-focus-inner,option::-moz-focus-inner{outline:none!important;border:none!important}
+code{padding:2px;background:#ddd}
+img{max-width:100%}
+#gh-logo{max-width:500%}
+.content-text a.text{cursor:text}
+a.text:hover{text-decoration:none}
+*,:before,:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0}
+.header{min-height:125px}
+.headercontent{margin-top:30px}
+.promo .content .footer{display:inline-block;width:100%}
+.content .panel-default > .panel-heading{background:#00c6cb!important;border-color:#00c6cb!important;color:#fff;border-radius:0;font-size:18px;text-transform:uppercase;font-weight:400}
+.header-container{display:inline-block;width:100%;border:0;position:relative;display:inline-block;width:100%;border:0;position:relative}
+.header-container .header-top{display:inline-block;width:100%;padding:5px 0;text-align:center;background:#f5f5f5}
+.header-container .header-top span{color:#171717;font-size:14px;font-weight:600;font-family:'Open Sans',sans-serif}
+.icon-menu-mb,.header-container .header-content .nav-trigger{display:none}
+.header-container .header-content .logo-content{display:inline-block;text-align:center;max-width:270px;margin:1.5em 0}
+.header-content{display:inline-block;width:100%;background:#FFF;padding:1em 0 4em;text-align:center}
+.header-container{display:inline-block;width:100%}
+.menu-header{display:inline-block;width:100%;position:absolute;bottom:-3px;left:0;background:#00c6cb;text-align:center}
+.menu-header-mobile{display:none}
+.menu-header .container{position:relative}
+.menu-header .menu-container{width:100%}
+.menu-header ul li{list-style-type:none;display: inline-block;}
+.menu-header ul li a{padding:17px 16px;font-family:'Oswald',sans-serif;font-size:18px;color:#fff;display:inline-block;line-height:18px;text-transform:uppercase;font-weight:400}
+.menu-header ul li a:hover{background:#f5f5f5;color:#666}
+.hidden-nav{display:none}
+.content{margin-top:0}
+@media (max-width: 768px) {
+.promo{display:none}
+}
+.promo,.promo .promo-content{display:inline-block;width:100%}
+.promo{border-bottom:1px solid #f5f5f5;background:#f5f5f5;box-shadow:0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08)}
+.promo .promo-content{text-align:center;padding:15px 0 10px}
+.promo .promo-content span{display:inline-block;color:#333;font-size:14px;font-weight:600;font-family:'Open Sans',sans-serif}
+.promo .promo-content span span{text-transform:uppercase;font-size:14px;font-family:'Open Sans',sans-serif}
+.promo .promo-content span.box-promotion{border-right:1px solid #999;line-height:12px;padding-right:15px;padding-left:15px}
+.promo .promo-content .fa{font-size:15x;padding-right:.5em}
+.promo .promo-content span.box-promotion:last-child{border-right:0}
+.banner{margin-top:1em}
+.left-content{padding-left:0}
+.left-content h2{margin:0;font-size:18px;font-family:'Open Sans',sans-serif;font-weight:700;background:#00c6cb;color:#fff;width:100%;padding:12px 15px}
+.left-content .widget_content{border:1px solid #dbdee1;border-top:0}
+.left-content ul li{border-bottom:1px solid #dbdee1;list-style-type:none;}
+.left-content ul li:last-child{border-bottom:0}
+.left-content ul li a{color:#111;background:none;font-family:'Open Sans',sans-serif;font-size:14px;line-height:18px;display:inline-block;font-weight:400;padding:12px 10px}
+.left-content ul li a:hover{color:#00c6cb}
+.widget_box{margin-bottom:15px}
+.widget_box_text{background:#0a0a0a;border-radius:10px;padding:15px;color:#fff;text-align:justify;font-family:'Open Sans',sans-serif}
+.widget_box_text .heading{color:#fdf234;font-size:16px;font-weight:700;text-align:center}
+.widget_box_text p{padding:10px 0}
+.content{border-color:#00c6cb!important;border-radius:0;margin-top:1em}
+.product-name{background:#00c6cb!important;border-color:#00c6cb!important;color:#fff;border-radius:0;font-size:18px;text-transform:uppercase;font-weight:400;padding:12px 10px}
+.subscribe{background:#00c6cb!important;border:0;text-transform:uppercase;border-radius:0;margin-top:1em;padding:10px}
+.subscribe i{font-size:22px;padding:0 5px 0 0}
+.content .panel-default{border-color:#e2e2e2!important;border-radius:0;font-family:'Open Sans',sans-serif}
+.right-content{padding:0}
+.image-gallery{position:relative;width:95%;margin:2em auto auto}
+.image-gallery img{margin:0 auto}
+.slider{width:100%;display:inline-block;padding-top:480px;text-align:center;}
+.slider .img-details{width:100%;position:absolute;left:0;top:0;transition:all .5s;text-align:center;max-height:570px;transition:all .5s;z-index:22;height:445px;background:#fff}
+.slider .img-details img{max-width:100%;max-height:443px;}
+.slider input[name='slide_switch']{display:none}
+.slider label{margin-right:11px;display:inline-block;cursor:pointer;transition:all .5s;opacity:1;margin-bottom:1em}
+.slider span{display:table-cell;width:90px;height:90px;text-align:center;border:1px solid #cdcdce;vertical-align:middle;}
+.slider span:has(img[src*="Liquid"]){display:none}
+.slider label img{max-width:100%;width:auto;padding:1px;max-height:88px}
+.slider img[src*="Liquid"]{display:none}
+.slider input[name='slide_switch']:checked+label{opacity:1}
+.slider input ~ .img-details{margin-bottom:0}
+.slider input[name='slide_switch'] ~ .img-details{opacity:0;display:none}
+.slider input[name='slide_switch']:checked + label + .img-details{opacity:1;display:block;transform:scale(1)}
+.slider #id1 + label + .img-details{opacity:1;display:block;transform:scale(1)}
+.tabPanel-widget{position:relative;background:#00c6cb;border:1px solid #00c6cb;border-top:0}
+.content .panel-default > .panel-heading{background:#00c6cb!important;border-color:#00c6cb!important;color:#fff;border-radius:0;font-size:16px;text-transform:uppercase;font-weight:700;font-family:'Open Sans',sans-serif;padding:12px 15px}
+.title-heading{width:100%;font-size:16px;font-weight:700;font-family:'Open Sans',sans-serif;background:#00c6cb;color:#fff;line-height:30px;margin-top:0;border-bottom:2px solid #00c6cb;padding:5px 10px;text-transform:uppercase}
+.desc-box{border:0;}
+.text-section img{display: block;max-width: 100%;height: auto;margin:0 auto;}
+.text-section,.text-section a,.text-section li,.text-section p,.text-section tr,.text-section td{margin-bottom:0;line-height:22px;font-size:15px;color:#000;font-family:'Open Sans',sans-serif}
+.text-section{padding:10px 10px 20px;border:1px solid #e2e2e2;}
+.text-section a{color:#111;font-family:'Open Sans',sans-serif}
+.text-section a:hover{text-decoration:underline}
+.text-section ul{margin-bottom:10px;padding-left:20px}
+.text-section ul li{margin:0 0 5px;position:relative;list-style-type:disc}
+.text-section ol li{margin:0 0 5px;position:relative;list-style-type:decimal}
+.text-section ul li:last-child{margin-bottom:0}
+.text-section h1{font-size:20px;color:#252525;text-transform:uppercase;font-weight:600;line-height:32px;margin-top:10px}
+.text-section h2{font-size:18px;color:#252525;text-transform:uppercase;font-weight:600;line-height:25px;margin-top:10px}
+.text-section h3,.text-section h4,.text-section h5,.text-section h6{font-size:14px;color:#000;font-weight:700;line-height:20px;margin-top:10px}
+.tab-content{display:inline-block;width:100%;position:relative;padding:44px 0 0;font-size:16px}
+.tabarea section{display:none;width:100%;margin:0;padding:25px 0 35px;border-top:1px solid #000}
+.tabarea input{display:none}
+.tabarea label{display:inline-block;color:#666;text-transform:uppercase;font-size:17px;line-height:24px;font-weight:400;padding:10px 23px;float:left;cursor:pointer;position:absolute;z-index:2;border:0;margin:0 1px 0 0;top:0;left:0;font-family:'Open Sans',sans-serif}
+.tabarea label span{font-family:'Open Sans',sans-serif;font-size:16px;font-weight:700}
+.tabarea #tab3 + label{margin-right:0;left:251px}
+.tabarea #tab4 + label{margin-right:0;left:384px}
+.tabarea input:checked + label{color:#fff;border-bottom:0;background:#00c6cb;padding-bottom:10px}
+.tabarea #tab2+ label{left:126px}
+#tab1:checked ~ #content1,#tab2:checked ~ #content2,#tab3:checked ~ #content3,#tab4:checked ~ #content4{display:inline-block}
+.tabarea section p img{margin-left:10px}
+.tabarea section,.tabarea section a,.tabarea section li,.tabarea section p,.tabarea section tr,.tabarea section td{margin-bottom:0;line-height:22px;font-size:15px;color:#000;font-family:'Open Sans',sans-serif}
+.tabarea section{margin:0;padding:25px 20px 35px;border:1px solid #e2e2e2;border-top:1px solid #00c6cb}
+.tabarea section a{color:#111;font-family:'Open Sans',sans-serif}
+.tabarea section a:hover{text-decoration:underline}
+.tabarea section ul{margin-bottom:10px}
+.tabarea section ul li{margin:0 0 5px;position:relative}
+.tabarea section ul li:last-child{margin-bottom:0}
+.tabarea section h1{font-size:20px;color:#252525;text-transform:uppercase;font-weight:600;line-height:32px;margin-top:10px}
+.tabarea section h2{font-size:18px;color:#252525;text-transform:uppercase;font-weight:600;line-height:25px;margin-top:10px}
+.tabarea section h3,.tabarea section h4,.tabarea section h5,.tabarea section h6{font-size:14px;color:#000;font-weight:700;line-height:20px;margin-top:10px}
+.description-tab p{margin:0 0 15px}
+.footer{background:#211D1E;padding:30px 0 0;color:#d1d1d1;margin-top:2em}
+.footer .head{font-size:20px;color:#fff;text-transform:uppercase;border-bottom:1px solid #474747;padding-bottom:5px;margin-bottom:8px;font-family:'Open Sans',sans-serif}
+.footer i{width:25px}
+.footer ul{margin:0;padding:10px 0 0}
+.footer p{margin:0;font-family:'Open Sans',sans-serif;font-size:15px}
+.footer ul li{display:block;padding:3px 0}
+.footer .footer-signup a{display:inline-block;padding:8px 19px;line-height:18px;color:#fff;background:#00c6cb;font-size:14px;font-family:'Open Sans',sans-serif;text-transform:uppercase;margin-top:14px;border-radius:2px}
+.footer .footer-signup a:hover{background:#fff;color:#00c6cb}
+.footer ul li a{color:#d1d1d1!important;font-size:14px;text-transform:uppercase;font-family:'Open Sans',sans-serif}
+.footer .contact-us{padding-left:0}
+.footer .footer-promo{padding-right:0}
+.footer .contact-us a{color:#d1d1d1!important}
+.footer .btn-warning{background:#fdf234!important;color:#000;border-color:#fdf234!important}
+.copyrights{border-top:1px dotted #333;padding:10px;margin-top:2em}
+@media (max-width: 1210px) and (min-width: 1140px) {
+.slider{padding-top:495px}
+.slider .img-details,.slider .img-details img{max-height:443px}
+}
+@media (min-width:769px) and (max-width:992px) {
+#LeftPanel{width:210px}
+}
+@media(min-width:992px) and (max-width:1140px) {
+.slider #id1 + label + .img-details:hover,.slider input[name='slide_switch']:checked+label+ .img-details:hover{transform:scale(1.1);border:1px solid #00c6cb}
+}
+@media (max-width: 992px) {
+.slider{padding-top:495px}
+.slider .img-details,.slider .img-details img{max-height:443px}
+}
+@media(max-width: 940px) {
+.footer .footer-promo{display:none}
+.footer-signup{float:right}
+.contact-us{width:33%}
+}
+@media (max-width: 939px) {
+.slider{padding-top:475px}
+.slider .img-details,.slider .img-details img{max-height:443px}
+}
+@media(width: 768px) {
+header-container .header-content .logo-content{width:200px;margin-right:10px}
+#LeftPanel{width:210px}
+.slider{padding-top:390px}
+.slider .img-details,.slider .img-details img{max-height:370px}
+.slider label{margin-right:14px}
+.slider span{width:81px;height:81px}
+.slider label img{max-height:79px}
+}
+@media(max-width: 767px) {
+.header-container{border:0}
+.header-container .header-content .logo-content{padding-bottom:13px;float:none;display:inline-block}
+.header-container .header-content .logo-content img{width:210px}
+.header-content{padding:20px 0 15px;position:relative;text-align:center}
+.header-right{width:100%;display:inline-block}
+.search-container{width:100%;float:none}
+.search-content{position:relative;width:100%;margin-top:9px}
+.wrappage .search-content{margin-top:0!important}
+.navigation{background:#111}
+.nav-item{width:100%;border-top:1px solid #ddd;border-bottom:1px solid #000}
+.nav-trigger{position:absolute;clip:rect(0,0,0,0)}
+.nav-trigger + label{display:block;background:#00c6cb;cursor:pointer;color:#fff;line-height:45px;font-size:18px;font-family:"Open Sans",sans-serif;margin:0}
+.nav-trigger + label::before{display:inline-block;width:24px;height:16px;right:10px;top:15px;content:"\f0c9";font-family:'FontAwesome';font-size:1.5em;padding-left:10px;vertical-align:middle;float:left;font-weight:400}
+.header-content .menu-header{-webkit-transition:opacity .5s ease-in-out;-moz-transition:opacity .5s ease-in-out;-ms-transition:opacity .5s ease-in-out;-o-transition:opacity .5s ease-in-out;transition:opacity .5s ease-in-out;display:none}
+.nav-trigger:checked ~ .menu-header{filter:alpha(opacity=50);opacity:1;display:inline-block}
+.menu-header{display:none;z-index:19;width:100%;position:relative;top:1px;left:0;background:#fff;text-align:left}
+.menu-header-mobile{display:inline-block;width:100%}
+.menu-header-mobile .container{padding:0}
+.menu-header ul.menu{box-shadow:0 4px 4px #e6e6e6}
+.menu-header ul{text-align:center;width:100%}
+.menu-header ul li{width:100%;position:relative;border-bottom:1px solid #f5f5f5}
+.menu-header ul li a{background:#00c6cb;color:#111;line-height:22px;font-size:16px;font-family:"Oswald",sans-serif;padding:10px;display:inline-block;width:100%;color:#fff}
+.menu-header ul li a:hover{background:#f5f5f5;color:#00c6cb}
+.menu-header ul li input{display:none}
+.contact-us{display:none!important}
+.footer-signup{float:left;width:100%;margin-top:2em}
+.slider{padding-top:320px;width:100%;position:relative}
+.slider .img-details,.slider .img-details img{max-height:300px}
+.slider label{margin-right:12px}
+.slider span{width:66px;height:66px}
+.slider label img{max-height:64px}
+.product-name{font-size:23px!important}
+.tab-list{margin:0 0 30px}
+.tabarea{border:0;margin:27px 0 0}
+.tabarea::before{display:none}
+.tabarea label{width:100%;display:inline-block;position:relative;padding:12px 0;font-size:20px;border-bottom:1px solid #fff;color:#fff;font-weight:700;border-bottom:0;background:#00c6cb;padding-bottom:12px;padding:12px 20px;border-bottom:1px solid #fff}
+.tabarea label::before{display:inline-block;width:24px;height:16px;position:absolute;right:10px;top:15px;content:"\f067";font-family:'FontAwesome';font-size:1em;padding-right:10px;vertical-align:middle;float:right;font-weight:400}
+.tabarea input:checked + label{padding:12px 20px}
+.tabarea input:checked + label::before{display:inline-block;width:24px;height:16px;content:"";position:absolute;right:10px;top:15px;content:"\f068";font-family:'FontAwesome';font-size:1em;padding-right:10px;vertical-align:middle;float:right;font-weight:400}
+.tabarea #tab2 + label,.tabarea #tab3 + label,.tabarea #tab4 + label{left:0;color:#fff;font-weight:700;border-bottom:0;background:#00c6cb;padding:12px 20px;border-bottom:1px solid #fff}
+.tabarea input:checked + label{border-bottom:1px solid #fff;color:#fff;font-weight:700;border-bottom:0;background:#00c6cb;padding-bottom:12px;border-bottom:1px solid #fff}
+.tabarea section{padding:14px 10px 17px;margin:0;border-top:0;border-bottom:1px solid #00c6cb}
+.tabarea section .content-right,.tabarea section .content-left{width:100%;padding:0}
+.tab-content{padding:0}
+}
+@media(max-width:568px) {
+.header-container .header-top{display:none}
+.header-container .header-content .logo-content{float:none}
+}
+</style>
+</head>
+<body>
+<div class="header-container">
+<div class="header-top">
+<div class="container">
+<p><span>Apparel Wholesale Depot</span></p>
+</div>
+</div>
+<div class="header-content">
+<div class="container">
+<a class="logo-content" href="" target="_blank"><img src=https://i.ebayimg.com/00/s/MzAwWDMwMA==/z/vKwAAOSwK~9kv6pe/$_57.PNG?set_id=8800004005" class="img-responsive"></a><!--Logo Link-->	
+<div class="header-right">
+<input type="checkbox" id="nav-trigger" class="nav-trigger">
+<label for="nav-trigger" class="hidden-nav">MENU</label>
+<div class="menu-header menu-header-mobile">
+<div class="container">
+<div class="menu-container">
+<ul class="menu">
+<li><a href="https://www.ebay.co.uk/str/apparelwholesaledepot" target="_blank">Home</a></li><!--Main Menu Links/Max 8 Links/Bettet Usage for Featured Categories-->	
+<li><a href="https://www.ebay.co.uk/str/apparelwholesaledepot" target="_blank">New Arrivals</a></li>
+<li><a href="https://www.ebay.co.uk/str/apparelwholesaledepot" target="_blank">Ending Soon</a></li>
+<li><a href="https://www.ebay.co.uk/str/apparelwholesaledepot#tab2" target="_blank">Feedback</a></li>
+<li><a href="https://www.ebay.co.uk/cnt/intermediatedFAQ?requested=apparelwholesaledepot" target="_blank">Contact Us</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="menu-header">
+<div class="container">
+<div class="menu-container">
+<ul class="menu">
+<li><a href="https://www.ebay.co.uk/str/apparelwholesaledepot" target="_blank">Home</a></li><!--Main Menu Links/Max 8 Links/Bettet Usage for Featured Categories-->	
+<li><a href="https://www.ebay.co.uk/str/apparelwholesaledepot" target="_blank">New Arrivals</a></li>
+<li><a href="https://www.ebay.co.uk/str/apparelwholesaledepot" target="_blank">Ending Soon</a></li>
+<li><a href="https://www.ebay.co.uk/str/apparelwholesaledepot#tab2" target="_blank">Feedback</a></li>
+<li><a href="https://www.ebay.co.uk/cnt/intermediatedFAQ?requested=apparelwholesaledepot" target="_blank">Contact Us</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="promo hidden-sm hidden-xs">
+<div class="container">
+<div class="promo-content"><!--Top Promo /Font-Awosem/Edit Text or Icon-->	
+<span class="box-promotion" target="_blank"  title="Fast & Free DELIVERY"><i class="fa fa-truck" aria-hidden="true"></i><span>Fast & Free Delivery</span> </span>
+<span class="box-promotion" target="_blank"  title="FREE HOME DELIVERY"><i class="fa fa-globe" aria-hidden="true"></i><span>United Kingdom Owned</span></span>
+<span class="box-promotion" target="_blank" title="FREE HOME DELIVERY"><i class="fa fa-gbp" aria-hidden="true"></i><span>Best Price Guarantee</span></span>
+<span class="box-promotion" target="_blank"  title="FREE HOME DELIVERY"><i class="fa fa-shield" aria-hidden="true"></i><span>Secure Shopping</span></span>
+</div>
+</div>
+</div>
+<!-- Start Banner -->
+<div class="banner">
+<div class="container">
+<img src="https://drive.google.com/uc?id=1XO2wxUJ-BfG37BrhvIyX7asvjme74NLX">
+</div>
+</div>
+<!-- End Banner -->
+<!--Header End-->	
+<div class="content">
+<div class="container">
+<div class="inner-row">
+<div class="col-sm-3 col-md-3 hidden-xs hidden-sm left-content">
+<div class="hidden-xs hidden-sm">
+<div class="widget_box">
+<div class="list-group">
+<h2>Categories</h2>
+<div class="widget_content">
+<ul>
+<li><a href="" target="_blank" >Gardening</a></li><!--Add Categories Link-->
+<li><a href="" target="_blank" >Kitchenware</a></li>
+<li><a href="" target="_blank" >Tools</a></li>
+<li><a href="" target="_blank" >Electrical </a></li>
+<li><a href="" target="_blank" >Other items</a></li>
+</ul>
+</div>
+</div>
+<div class="list-group">
+<h2>Usefull Link</h2>
+<div class="widget_content">
+<ul>
+<li><a href="https://www.ebay.co.uk/str/apparelwholesaledepot" target="_blank" >View Store</a></li><!--Add Usfull Link-->
+<li><a href="" target="_blank" >Add to Favourites</a></li>
+<li><a href="https://www.ebay.co.uk/cnt/intermediatedFAQ?requested=apparelwholesaledepot" target="_blank" >Ask Question </a></li>
+<li><a href="https://www.ebay.co.uk/str/apparelwholesaledepot#tab2" target="_blank" >View Feedback </a></li>
+</ul>
+</div>
+</div>
+<div class="list-group">
+<h2>Why Choose Us ?</h2>
+<div class="widget_content">
+<img src="https://drive.google.com/uc?id=17mCTtCZmLosNOlYYqlvQRh7y51-Z2nXp" class="img-responsive">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-9 right-content">
+<h1 class="title-heading">[TagBot!Title=]</h1><!--Item Title-->	
+<div class="panel panel-default">
+<div class="image-gallery">
+<div class="slider"><!--Image Gallery Start-->	
+<TagBot Optional section=true>
+<input type="radio" name="slide_switch" id="id1" checked value="[TagBot?Image1?Image1=][TagBot?Image1]">
+<label for="id1">
+<span><img src="[TagBot?Image1]" width="100"></span>
+</label>
+<div class="img-details"><img src="[TagBot?Image1]"></div>
+</TagBot>
+<TagBot Optional section=true>
+<input type="radio" name="slide_switch" id="id2" value="[TagBot?Image2?Image2=][TagBot?Image2]">
+<label for="id2">
+<span><img src="[TagBot?Image2]" width="100"></span>
+</label>
+<div class="img-details"><img src="[TagBot?Image2]"></div>
+</TagBot>
+<TagBot Optional section=true>
+<input type="radio" name="slide_switch" id="id3" value="[TagBot?Image3?Image3=][TagBot?Image3]">
+<label for="id3">
+<span><img src="[TagBot?Image3]" width="100"></span>
+</label>
+<div class="img-details"><img src="[TagBot?Image3]"></div>
+</TagBot>
+<TagBot Optional section=true>
+<input type="radio" name="slide_switch" id="id4" value="[TagBot?Image4?Image4=][TagBot?Image4]">
+<label for="id4">
+<span><img src="[TagBot?Image4]" width="100"></span>
+</label>
+<div class="img-details"><img src="[TagBot?Image4]"></div>
+</TagBot>
+<TagBot Optional section=true>
+<input type="radio" name="slide_switch" id="id5" value="[TagBot?Image5?Image5=][TagBot?Image5]">
+<label for="id5">
+<span><img src="[TagBot?Image5]" width="100"></span>
+</label>
+<div class="img-details"><img src="[TagBot?Image5]"></div>
+</TagBot>
+<TagBot Optional section=true>
+<input type="radio" name="slide_switch" id="id6" value="[TagBot?Image6?Image6=][TagBot?Image6]">
+<label for="id6">
+<span><img src="[TagBot?Image6]" width="100"></span>
+</label>
+<div class="img-details"><img src="[TagBot?Image6]"></div>
+</TagBot>
+</div>
+</div>
+</div>
+<div class="panel panel-default desc-box">
+<div class="panel-heading">DESCRIPTION</div><!--DESCRIPTION Start-->	
+<div class="text-section">
+<div class="panel-body">
+<p>[TagBot Product-Details=]</p><!--Decription Body-->
+</div>
+</div>
+</div>
+<div class="tabarea">
+<div class="tab-content">
+<input id="tab1" type="radio" name="tabs" checked>
+<label for="tab1"><span>Returns</span><!--Tab 1 Name-->	
+</label>
+<section id="content1">
+<!--Tab 1 Content-->
+<div>
+    <p><strong>Eligibility for Returns:</strong></p>
+<ol>
+<li>
+<p>The item must be in its original condition: To be eligible for a return, the product must be unused, undamaged, and in its original packaging with all tags and labels attached.</p>
+</li>
+<li>
+<p>Within the 30-day window: You have 30 days from the date of delivery to initiate a return. After this period, we will no longer accept returns.</p>
+</li>
+<li>
+<p>Proof of purchase: A valid proof of purchase, such as an order number or purchase receipt, must accompany the return.</p>
+</li>
+<li>
+<p>Non-returnable items: Certain products may not be eligible for return due to hygiene or safety reasons. These may include but are not limited to perishable goods, personalized items, and downloadable software. Please check the product description to verify eligibility.</p>
+</li>
+</ol>
+<p><strong>Return Process:</strong></p>
+<ol>
+<li>
+<p>Initiate the return: To start the return process, please contact our customer support team via email or phone. They will guide you through the return procedure and provide a Return Authorization (RA) number.</p>
+</li>
+<li>
+<p>Secure packaging: Ensure the item is securely packed to prevent any damage during transit. We recommend using the original packaging, if available.</p>
+</li>
+<li>
+<p>Labeling: Clearly write the RA number on the outside of the package. Returns without a valid RA number may be subject to delays or rejection.</p>
+</li>
+<li>
+<p>Shipping costs: The customer is responsible for the shipping costs incurred during the return process unless the return is due to an error on our part (e.g., wrong item shipped, damaged product).</p>
+</li>
+<li>
+<p>Insured shipping: We strongly advise using a shipping method with tracking and insurance, as we cannot be held responsible for lost or damaged returns.</p>
+</li>
+</ol>
+<p><strong>Refund/Exchange Process:</strong></p>
+<ol>
+<li>
+<p>Inspection: Once we receive the returned item, our team will inspect it to ensure it meets the eligibility criteria.</p>
+</li>
+<li>
+<p>Refund/Exchange: If the return is approved, you may choose between a full refund or an exchange for a similar item of equal value. The refund will be processed using the original payment method.</p>
+</li>
+<li>
+<p>Processing time: Please allow 5-7 business days for the refund or exchange to be processed from the date we receive your returned item.</p>
+</li>
+</ol>
+<p><strong>Additional Information:</strong></p>
+<ul>
+<li>
+<p>If you received a damaged, defective, or incorrect product, please contact us immediately, and we will rectify the situation promptly at no additional cost to you.</p>
+</li>
+<li>
+<p>For international orders, the 30-day return policy applies from the date of delivery, but return shipping costs and customs duties may vary.</p>
+</li>
+<li>
+<p>Our return policy is subject to change without prior notice. Any modifications will be communicated on our website.</p>
+</li>
+</ul>
+<p>We value your satisfaction and are committed to resolving any issues you may encounter with your purchase. If you have any questions or concerns about our return policy or need assistance with a return, please do not hesitate to contact our customer support team.</p>
+<p>Thank you for choosing Apparel Wholesale Depot, and we look forward to serving you again soon!</p>
+</div>
+</section>
+<input id="tab2" type="radio" name="tabs">
+<label for="tab2"><span>Delivery</span><!--Tab 2 Name-->
+</label>
+<section id="content2">
+<!--Tab 2 Content-->
+<div>
+    <p><strong>1. Shipping Method:</strong> We are pleased to offer delivery of our products through Royal Mail 2nd Class postage for all orders placed through our eBay store. Royal Mail 2nd Class is a reliable and cost-effective delivery option that ensures your package will be delivered securely and promptly.</p>
+<p><strong>2. Shipping Zones:</strong> At this time, we offer shipping within [list the applicable shipping zones, e.g., within the United Kingdom]. Please note that we do not currently ship internationally.</p>
+<p><strong>3. Processing Time:</strong> Upon receiving your order, we strive to process and dispatch it within [state the processing time, e.g., 1-3 business days]. Please allow for additional processing time during peak seasons and holidays.</p>
+<p><strong>4. Estimated Delivery Time:</strong> The estimated delivery time for orders shipped via Royal Mail 2nd Class postage is typically [mention the estimated delivery timeframe, e.g., 3-5 business days]. However, please note that actual delivery times may vary depending on the shipping destination and other unforeseen circumstances.</p>
+<p><strong>6. Tracking Information:</strong> We provide order tracking information for all shipments sent via Royal Mail 2nd Class postage. You will receive a tracking number via eBay's messaging system or email once your order has been dispatched. You can use this tracking number to monitor the status and location of your package during transit.</p>
+<p><strong>7. Shipping Notifications:</strong> We will notify you via eBay's messaging system or email when your order has been successfully dispatched. This notification will include your tracking number, estimated delivery date, and any relevant shipping details.</p>
+<p><strong>8. Delivery Address:</strong> Please ensure that the delivery address provided during the checkout process is accurate and complete. We will not be responsible for any delays or misdeliveries resulting from incorrect or incomplete addresses.</p>
+<p><strong>9. Non-Delivery and Lost Packages:</strong> In the rare event that your package does not arrive within the estimated delivery timeframe or is deemed lost by the postal service, please contact us through eBay's messaging system. We will initiate an investigation with Royal Mail to determine the package's status and offer a suitable resolution.</p>
+<p><strong>10. Failed Delivery Attempts:</strong> If Royal Mail attempts delivery and is unsuccessful, they may leave a delivery card or attempt redelivery on a subsequent day. It is your responsibility to arrange for re-delivery or collection at a local post office as per Royal Mail's guidelines.</p>
+<p><strong>11. Combined Shipping:</strong> For multiple items purchased together, we will make every effort to combine shipping and reduce overall shipping costs where applicable.</p>
+<p><strong>12. Shipping Restrictions:</strong> Certain products may have shipping restrictions due to legal, regulatory, or logistical reasons. Please review the product listing or contact us if you have any questions regarding shipping restrictions.</p>
+<p><strong>13. Changes to Delivery Policy:</strong> We reserve the right to modify or update this delivery policy at any time. Changes will be effective immediately upon posting on our eBay store.</p>
+<p>Thank you for shopping with us. If you have any further questions or require assistance with your order, please don't hesitate to contact us through eBay's messaging system.</p>
+<p>Apparel Wholesale Depot</p>
+<p>&nbsp;</p>
+</div>
+</section>
+<input id="tab3" type="radio" name="tabs">
+<label for="tab3"><span>Payment</span><!--Tab 3 Name-->
+</label>
+<section id="content3">
+<!--Tab 3 Content-->
+<div>
+    <p><strong>We accept the following payment methods for all purchases:</strong></p>
+<ol>
+<li>Credit/Debit Cards: We accept major credit and debit cards, including Visa, Mastercard, American Express, and Discover.</li>
+<li>PayPal: You can make payments using your PayPal account.</li>
+<li>Bank Transfers: Direct bank transfers are accepted for bulk or high-value orders. Please contact our customer support for more details.</li>
+</ol>
+<p>&nbsp;</p>
+</div>
+</section>
+<input id="tab4" type="radio" name="tabs">
+<label for="tab4"><span>About Us</span><!--Tab 4 Name-->
+</label>
+<section id="content4">
+<!--Tab 4 Content-->
+<div>
+    <p>Embark on a Fashion Journey with <strong>Apparel Wholesale Depot</strong> With over 15 years of excellence in the apparel industry, Apparel Wholesale Depot has become a household name, catering to diverse businesses and customers worldwide. Now, we are excited to take our services to new heights as we join eBay - your ultimate shopping destination! At Apparel Wholesale Depot, we understand that fashion is not just a statement, it's an emotion. With an extensive collection of trendy pin badges, exquisite garden items, stylish kitchen accessories, chic patches, elegant cufflinks, and sophisticated tie clips, we curate the latest in fashion, guaranteeing to elevate your style game. Our team of passionate designers and craftsmen work tirelessly to ensure that each product is crafted with precision and love. Quality and customer satisfaction are at the core of our values, and our commitment to excellence shines through in every item we offer.</p>
+<p>&nbsp;</p>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--Footer Start-->
+<div class="footer">
+<div class="container">
+<div class="inner-row">
+<div class="col-sm-4 contact-us">
+<div class="head">About Us</div>
+<p>Embark on a Fashion Journey with Apparel Wholesale Depot! With over 15 years of excellence in the apparel industry, Apparel Wholesale Depot has become a household name, catering to diverse businesses and customers worldwide. Now, we are excited to take our services to new heights as we join eBay - your ultimate shopping destination!
+
+At Apparel Wholesale Depot, we understand that fashion is not just a statement, it's an emotion. With an extensive collection of trendy pin badges, exquisite garden items, stylish kitchen accessories, chic patches, elegant cufflinks, and sophisticated tie clips, we curate the latest in fashion, guaranteeing to elevate your style game.
+
+Our team of passionate designers and craftsmen work tirelessly to ensure that each product is crafted with precision and love. Quality and customer satisfaction are at the core of our values, and our commitment to excellence shines through in every item we offer.
+</p>
+</div>
+<div class="col-sm-1"></div>
+<div class="col-sm-3 footer-signup">
+<div class="head">Newsletter</div><!--Footer Tab-3-->
+<p>Sign up to our newsletter for special deals</p>
+<a href="" target="_blank" title="SUBMIT">SUBMIT</a><!--Newsletter Link-->
+</div>
+<div class="col-sm-1"></div>
+<div class="col-sm-3 hidden-xs footer-promo">
+<div class="head">We Accept Only</div><!--Footer Tab-4-->
+<p><img src="https://drive.google.com/uc?id=1UWiRLGAI9JGhxmBUdJUqf_1WkefS6CgR" class="img-responsive"><!--Payment Banner-Footer-->
+</p>
+</div>
+<div class="clearfix"></div>
+<div class="copyrights">
+<p class="text-center">Apparel Wholesale Depot &copy; 2023. All rights reserved.</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
